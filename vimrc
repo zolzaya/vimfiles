@@ -147,3 +147,5 @@ if has("statusline") && !&cp
   set statusline+=Buf:#%n
   set statusline+=[%b][0x%B]
 endif
+
+nnoremap <leader>rs :!clear;rspec --color spec<CR>
