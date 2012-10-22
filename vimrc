@@ -17,6 +17,7 @@ runtime macros/matchit.vim  " enables % to cycle through `if/else/endif`
 syntax enable
 set term=gnome-256color
 colorscheme ir_dark
+"set guifont=Inconsolata\ Medium
 
 set nonumber    " line numbers aren't needed
 set ruler       " show the cursor position all the time
