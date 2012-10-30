@@ -150,3 +150,6 @@ if has("statusline") && !&cp
 endif
 
 nnoremap <leader>rs :!clear;rspec --color spec<CR>
+
+"Configuración para Ack en Ubuntu
+let g:ackprg="ack-grep -H --nocolor --nogroup --column"
