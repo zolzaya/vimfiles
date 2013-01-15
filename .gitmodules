@@ -31,9 +31,6 @@
 [submodule "bundle/commentary"]
 	path = bundle/commentary
 	url = https://github.com/tpope/vim-commentary
-[submodule "bundle/molokai"]
-	path = bundle/molokai
-	url = https://github.com/mrtazz/molokai.vim
 [submodule "bundle/tabular"]
 	path = bundle/tabular
 	url = https://github.com/godlygeek/tabular
@@ -43,9 +40,6 @@
 [submodule "bundle/puppet"]
 	path = bundle/puppet
 	url = https://github.com/rodjek/vim-puppet
-[submodule "bundle/solarized"]
-	path = bundle/solarized
-	url = https://github.com/altercation/vim-colors-solarized
 [submodule "bundle/repeat"]
 	path = bundle/repeat
 	url = https://github.com/tpope/vim-repeat
@@ -79,3 +73,9 @@
 [submodule "bundle/handlebars"]
 	path = bundle/handlebars
 	url = git://github.com/nono/vim-handlebars.git
+[submodule "bundle/mustang-vim"]
+	path = bundle/mustang-vim
+	url = git@github.com:croaker/mustang-vim.git
+[submodule "bundle/vim-backbone"]
+	path = bundle/vim-backbone
+	url = git@github.com:mklabs/vim-backbone.git

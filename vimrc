@@ -6,35 +6,40 @@
 ""   Janus  <github.com/carlhuda/janus>
 ""
 
-set nocompatible
-set encoding=utf-8
 
 call pathogen#infect()
+call pathogen#helptags()
+
 filetype plugin indent on
+
+set nocompatible
+set encoding=utf-8
+set visualbell
+set wildmenu
+set wildmode=list:longest
 
 runtime macros/matchit.vim  " enables % to cycle through `if/else/endif`
 
 syntax enable
-set term=gnome-256color
-colorscheme ir_dark
-"set guifont=Inconsolata\ Medium
+colorscheme mustang
+set guifont=Monaco:h14
 
-set nonumber    " line numbers aren't needed
+set number    " line numbers aren't needed
 set ruler       " show the cursor position all the time
 set cursorline  " highlight the line of the cursor
 set showcmd     " show partial commands below the status line
 set shell=bash  " avoids munging PATH under zsh
 let g:is_bash=1 " default shell syntax
-set history=200 " remember more Ex commands
+set history=1000 " remember more Ex commands
 set scrolloff=3 " have some context around the current line always on screen
-
+set title
 " Allow backgrounding buffers without writing them, and remember marks/undo
 " for backgrounded buffers
 set hidden
 
 "" Whitespace
 set nowrap                        " don't wrap lines
-set tabstop=2                     " a tab is two spaces
+set tabstop=4                     " a tab is two spaces
 set shiftwidth=2                  " an autoindent (with <<) is two spaces
 set expandtab                     " use spaces, not tabs
 set list                          " Show invisible characters
@@ -53,34 +58,6 @@ set incsearch                     " incremental searching
 set ignorecase                    " searches are case insensitive...
 set smartcase                     " ... unless they contain at least one capital letter
 
-function s:setupWrapping()
-  set wrap
-  set wrapmargin=2
-  set textwidth=80
-endfunction
-
-if has("autocmd")
-  " In Makefiles, use real tabs, not tabs expanded to spaces
-  au FileType make set noexpandtab
-
-  " Make sure all markdown files have the correct filetype set and setup wrapping
-  au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn,txt} setf markdown | call s:setupWrapping()
-
-  " Treat JSON files like JavaScript
-  au BufNewFile,BufRead *.json set ft=javascript
-
-  " make Python follow PEP8 ( http://www.python.org/dev/peps/pep-0008/ )
-  au FileType python set softtabstop=4 tabstop=4 shiftwidth=4 textwidth=79
-
-  " Remember last location in file, but not for commit messages.
-  " see :help last-position-jump
-  au BufReadPost * if &filetype !~ '^git\c' && line("'\"") > 0 && line("'\"") <= line("$")
-    \| exe "normal! g`\"" | endif
-
-  " mark Jekyll YAML frontmatter as comment
-  au BufNewFile,BufRead *.{md,markdown,html,xml} sy match Comment /\%^---\_.\{-}---$/
-endif
-
 " don't use Ex mode, use Q for formatting
 map Q gq
 
@@ -92,6 +69,7 @@ let mapleader=","
 " paste lines from unnamed register and fix indentation
 nmap <leader>p pV`]=
 nmap <leader>P PV`]=
+nmap <F4> :NERDTreeToggle<cr>
 
 map <leader>gv :CommandTFlush<cr>\|:CommandT app/views<cr>
 map <leader>gc :CommandTFlush<cr>\|:CommandT app/controllers<cr>
@@ -115,6 +93,7 @@ nnoremap <leader><leader> <c-^>
 
 " find merge conflict markers
 nmap <silent> <leader>cf <ESC>/\v^[<=>]{7}( .*\|$)<CR>
+nmap <silent> <leader>n :silent :nohlsearch<CR>
 
 command! KillWhitespace :normal :%s/ *$//g<cr><c-o><cr>
 
@@ -153,3 +132,10 @@ nnoremap <leader>rs :!clear;rspec --color spec<CR>
 
 "Configuración para Ack en Ubuntu
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+
+if exists(":Tabularize")
+  nmap <Leader>a= :Tabularize /=<CR>
+  vmap <Leader>a= :Tabularize /=<CR>
+  nmap <Leader>a: :Tabularize /:\zs<CR>
+  vmap <Leader>a: :Tabularize /:\zs<CR>
+endif
