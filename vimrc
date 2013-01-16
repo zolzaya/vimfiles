@@ -71,6 +71,7 @@ nmap <leader>p pV`]=
 nmap <leader>P PV`]=
 nmap <F4> :NERDTreeToggle<cr>
 
+map <leader>t :CommandTFlush<cr>\|:CommandT<cr>
 map <leader>gv :CommandTFlush<cr>\|:CommandT app/views<cr>
 map <leader>gc :CommandTFlush<cr>\|:CommandT app/controllers<cr>
 map <leader>gm :CommandTFlush<cr>\|:CommandT app/models<cr>

@@ -79,3 +79,9 @@
 [submodule "bundle/vim-backbone"]
 	path = bundle/vim-backbone
 	url = git@github.com:mklabs/vim-backbone.git
+[submodule "bundle/vim-symfony"]
+	path = bundle/vim-symfony
+	url = git@github.com:docteurklein/vim-symfony.git
+[submodule "bundle/vim-twig"]
+	path = bundle/vim-twig
+	url = git@github.com:beyondwords/vim-twig.git
