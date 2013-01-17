@@ -22,16 +22,17 @@ runtime macros/matchit.vim  " enables % to cycle through `if/else/endif`
 
 syntax enable
 colorscheme mustang
-set guifont=Monaco:h14
+set guifont=Monaco:h13
 
-set number    " line numbers aren't needed
-set ruler       " show the cursor position all the time
-set cursorline  " highlight the line of the cursor
-set showcmd     " show partial commands below the status line
-set shell=bash  " avoids munging PATH under zsh
-let g:is_bash=1 " default shell syntax
+set linespace=3  " set linespace
+set number       " line numbers aren't needed
+set ruler        " show the cursor position all the time
+set cursorline   " highlight the line of the cursor
+set showcmd      " show partial commands below the status line
+set shell=bash   " avoids munging PATH under zsh
+let g:is_bash=1  " default shell syntax
 set history=1000 " remember more Ex commands
-set scrolloff=3 " have some context around the current line always on screen
+set scrolloff=3  " have some context around the current line always on screen
 set title
 " Allow backgrounding buffers without writing them, and remember marks/undo
 " for backgrounded buffers
@@ -117,16 +118,14 @@ if has("statusline") && !&cp
   set laststatus=2  " always show the status bar
 
   " Start the status line
-  set statusline=%f\ %m\ %r
+  set statusline=%f\ %m\ %r%=
 
   " Add fugitive
-  set statusline+=%{fugitive#statusline()}
+  set statusline+=%{fugitive#statusline()}\ 
 
   " Finish the statusline
-  set statusline+=Line:%l/%L[%p%%]
+  set statusline+=Line:%l/%L\ [%p%%]\ 
   set statusline+=Col:%v
-  set statusline+=Buf:#%n
-  set statusline+=[%b][0x%B]
 endif
 
 nnoremap <leader>rs :!clear;rspec --color spec<CR>
