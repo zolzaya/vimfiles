@@ -70,7 +70,9 @@ let mapleader=","
 " paste lines from unnamed register and fix indentation
 nmap <leader>p pV`]=
 nmap <leader>P PV`]=
+nnoremap <F3> :NumbersToggle<CR>
 nmap <F4> :NERDTreeToggle<cr>
+nmap <F5> :TagbarToggle<CR>
 
 map <leader>t :CommandTFlush<cr>\|:CommandT<cr>
 map <leader>gv :CommandTFlush<cr>\|:CommandT app/views<cr>
