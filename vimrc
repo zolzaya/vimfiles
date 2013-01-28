@@ -129,9 +129,6 @@ endif
 
 nnoremap <leader>rs :!clear;rspec --color spec<CR>
 
-"Configuración para Ack en Ubuntu
-let g:ackprg="ack-grep -H --nocolor --nogroup --column"
-
 if exists(":Tabularize")
   nmap <Leader>a= :Tabularize /=<CR>
   vmap <Leader>a= :Tabularize /=<CR>
