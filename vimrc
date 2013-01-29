@@ -25,6 +25,7 @@ colorscheme mustang
 set guifont=Monaco:h13
 
 set linespace=3  " set linespace
+set antialias
 set number       " line numbers aren't needed
 set ruler        " show the cursor position all the time
 set cursorline   " highlight the line of the cursor
@@ -66,7 +67,10 @@ map Q gq
 :nnoremap <CR> :nohlsearch<cr>
 
 let mapleader=","
-
+let g:indent_guides_start_level = 2
+let g:indent_guides_guide_size = 1
+imap <leader>e <C-y>,
+imap <C-j> <C-x><C-o>
 " paste lines from unnamed register and fix indentation
 nmap <leader>p pV`]=
 nmap <leader>P PV`]=
@@ -74,20 +78,10 @@ nnoremap <F3> :NumbersToggle<CR>
 nmap <F4> :NERDTreeToggle<cr>
 nmap <F5> :TagbarToggle<CR>
 
-map <leader>t :CommandTFlush<cr>\|:CommandT<cr>
-map <leader>gv :CommandTFlush<cr>\|:CommandT app/views<cr>
-map <leader>gc :CommandTFlush<cr>\|:CommandT app/controllers<cr>
-map <leader>gm :CommandTFlush<cr>\|:CommandT app/models<cr>
-map <leader>gh :CommandTFlush<cr>\|:CommandT app/helpers<cr>
-map <leader>gl :CommandTFlush<cr>\|:CommandT lib<cr>
-map <leader>gf :CommandTFlush<cr>\|:CommandT features<cr>
-map <leader>gg :topleft 100 :split Gemfile<cr>
+map <leader>t :CtrlP<cr>
 " http://vimcasts.org/e/14
+"
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
-map <leader>F :CommandTFlush<cr>\|:CommandT %%<cr>
-
-let g:CommandTMaxHeight=10
-let g:CommandTMinHeight=4
 
 " ignore Rubinius, Sass cache files
 set wildignore+=tmp/**,*.rbc,.rbx,*.scssc,*.sassc
