@@ -15,8 +15,11 @@ filetype plugin indent on
 set nocompatible
 set encoding=utf-8
 set visualbell
+set noerrorbells
 set wildmenu
 set wildmode=list:longest
+set nobackup
+set noswapfile
 
 runtime macros/matchit.vim  " enables % to cycle through `if/else/endif`
 
@@ -33,6 +36,7 @@ set showcmd      " show partial commands below the status line
 set shell=bash   " avoids munging PATH under zsh
 let g:is_bash=1  " default shell syntax
 set history=1000 " remember more Ex commands
+set undolevels=1000
 set scrolloff=3  " have some context around the current line always on screen
 set title
 " Allow backgrounding buffers without writing them, and remember marks/undo
@@ -42,7 +46,7 @@ set hidden
 "" Whitespace
 set nowrap                        " don't wrap lines
 set tabstop=4                     " a tab is two spaces
-set shiftwidth=2                  " an autoindent (with <<) is two spaces
+set shiftwidth=4                  " an autoindent (with <<) is two spaces
 set expandtab                     " use spaces, not tabs
 set list                          " Show invisible characters
 set backspace=indent,eol,start    " backspace through everything in insert mode
@@ -59,6 +63,7 @@ set hlsearch                      " highlight matches
 set incsearch                     " incremental searching
 set ignorecase                    " searches are case insensitive...
 set smartcase                     " ... unless they contain at least one capital letter
+set smarttab
 
 " don't use Ex mode, use Q for formatting
 map Q gq
@@ -90,7 +95,7 @@ nnoremap <leader><leader> <c-^>
 
 " find merge conflict markers
 nmap <silent> <leader>cf <ESC>/\v^[<=>]{7}( .*\|$)<CR>
-nmap <silent> <leader>n :silent :nohlsearch<CR>
+nmap <silent> <leader>/ :nohlsearch<CR>
 
 command! KillWhitespace :normal :%s/ *$//g<cr><c-o><cr>
 
@@ -105,9 +110,6 @@ map <Left>  :echo "no!"<cr>
 map <Right> :echo "no!"<cr>
 map <Up>    :echo "no!"<cr>
 map <Down>  :echo "no!"<cr>
-
-set backupdir=~/.vim/_backup    " where to put backup files.
-set directory=~/.vim/_temp      " where to put swap files.
 
 if has("statusline") && !&cp
   set laststatus=2  " always show the status bar
