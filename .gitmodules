@@ -66,7 +66,7 @@
 	url = git://github.com/nono/vim-handlebars.git
 [submodule "bundle/mustang-vim"]
 	path = bundle/mustang-vim
-	url = git@github.com:croaker/mustang-vim.git
+	url = git@github.com:Orgil/mustang-vim.git
 [submodule "bundle/vim-backbone"]
 	path = bundle/vim-backbone
 	url = git@github.com:mklabs/vim-backbone.git
