@@ -25,9 +25,9 @@ runtime macros/matchit.vim  " enables % to cycle through `if/else/endif`
 
 syntax enable
 colorscheme mustang
-set guifont=Monaco:h13
+set guifont=Bitstream\ Vera\ Sans\ Mono:h13
 
-set linespace=3  " set linespace
+set linespace=5  " set linespace
 set antialias
 set number       " line numbers aren't needed
 set ruler        " show the cursor position all the time
@@ -133,3 +133,11 @@ if exists(":Tabularize")
   nmap <Leader>a: :Tabularize /:\zs<CR>
   vmap <Leader>a: :Tabularize /:\zs<CR>
 endif
+
+nmap <C-S-P> :call <SID>SynStack()<CR>
+function! <SID>SynStack()
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
