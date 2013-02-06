@@ -24,7 +24,7 @@ set noswapfile
 runtime macros/matchit.vim  " enables % to cycle through `if/else/endif`
 
 syntax enable
-colorscheme mustang
+colorscheme jellybeans
 set guifont=Bitstream\ Vera\ Sans\ Mono:h13
 
 set linespace=5  " set linespace
@@ -45,8 +45,9 @@ set hidden
 
 "" Whitespace
 set nowrap                        " don't wrap lines
-set tabstop=4                     " a tab is two spaces
-set shiftwidth=4                  " an autoindent (with <<) is two spaces
+set tabstop=2                     " a tab is two spaces
+set shiftwidth=2                  " an autoindent (with <<) is two spaces
+set softtabstop=2
 set expandtab                     " use spaces, not tabs
 set list                          " Show invisible characters
 set backspace=indent,eol,start    " backspace through everything in insert mode
@@ -72,8 +73,7 @@ map Q gq
 :nnoremap <CR> :nohlsearch<cr>
 
 let mapleader=","
-let g:indent_guides_start_level = 2
-let g:indent_guides_guide_size = 1
+
 imap <leader>e <C-y>,
 imap <C-j> <C-x><C-o>
 " paste lines from unnamed register and fix indentation
@@ -111,20 +111,6 @@ map <Right> :echo "no!"<cr>
 map <Up>    :echo "no!"<cr>
 map <Down>  :echo "no!"<cr>
 
-if has("statusline") && !&cp
-  set laststatus=2  " always show the status bar
-
-  " Start the status line
-  set statusline=%f\ %m\ %r%=
-
-  " Add fugitive
-  set statusline+=%{fugitive#statusline()}\ 
-
-  " Finish the statusline
-  set statusline+=Line:%l/%L\ [%p%%]\ 
-  set statusline+=Col:%v
-endif
-
 nnoremap <leader>rs :!clear;rspec --color spec<CR>
 
 if exists(":Tabularize")
@@ -133,11 +119,3 @@ if exists(":Tabularize")
   nmap <Leader>a: :Tabularize /:\zs<CR>
   vmap <Leader>a: :Tabularize /:\zs<CR>
 endif
-
-nmap <C-S-P> :call <SID>SynStack()<CR>
-function! <SID>SynStack()
-  if !exists("*synstack")
-    return
-  endif
-  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
-endfunc

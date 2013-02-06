@@ -85,9 +85,6 @@
 [submodule "bundle/neocomplcache"]
 	path = bundle/neocomplcache
 	url = git@github.com:Shougo/neocomplcache.git
-[submodule "bundle/vim-autoclose"]
-	path = bundle/vim-autoclose
-	url = git@github.com:spf13/vim-autoclose.git
 [submodule "bundle/vim-powerline"]
 	path = bundle/vim-powerline
 	url = git@github.com:Lokaltog/vim-powerline.git
@@ -100,9 +97,6 @@
 [submodule "bundle/numbers.vim"]
 	path = bundle/numbers.vim
 	url = git@github.com:myusuf3/numbers.vim.git
-[submodule "bundle/vim-indent-guides"]
-	path = bundle/vim-indent-guides
-	url = git@github.com:nathanaelkane/vim-indent-guides.git
 [submodule "bundle/gist-vim"]
 	path = bundle/gist-vim
 	url = git@github.com:mattn/gist-vim.git
@@ -115,9 +109,6 @@
 [submodule "bundle/vim-jst"]
 	path = bundle/vim-jst
 	url = git@github.com:briancollins/vim-jst.git
-[submodule "bundle/HTML-AutoCloseTag"]
-	path = bundle/HTML-AutoCloseTag
-	url = git@github.com:amirh/HTML-AutoCloseTag.git
 [submodule "bundle/vim-css3-syntax"]
 	path = bundle/vim-css3-syntax
 	url = git@github.com:hail2u/vim-css3-syntax.git
@@ -133,3 +124,6 @@
 [submodule "bundle/nerdcommenter"]
 	path = bundle/nerdcommenter
 	url = git@github.com:scrooloose/nerdcommenter.git
+[submodule "bundle/jellybeans.vim"]
+	path = bundle/jellybeans.vim
+	url = git@github.com:nanotech/jellybeans.vim.git
