@@ -20,6 +20,7 @@ set wildmenu
 set wildmode=list:longest
 set nobackup
 set noswapfile
+set clipboard=unnamed  " enables clipboard sharing
 
 runtime macros/matchit.vim  " enables % to cycle through `if/else/endif`
 
