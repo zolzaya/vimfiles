@@ -111,6 +111,7 @@ map <Left>  :echo "no!"<cr>
 map <Right> :echo "no!"<cr>
 map <Up>    :echo "no!"<cr>
 map <Down>  :echo "no!"<cr>
+map <C-Tab> :bnext<cr>
 
 nnoremap <leader>rs :!clear;rspec --color spec<CR>
 
