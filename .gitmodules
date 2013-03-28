@@ -52,15 +52,9 @@
 [submodule "bundle/handlebars"]
 	path = bundle/handlebars
 	url = git://github.com/nono/vim-handlebars.git
-[submodule "bundle/mustang-vim"]
-	path = bundle/mustang-vim
-	url = git@github.com:Orgil/mustang-vim.git
 [submodule "bundle/vim-backbone"]
 	path = bundle/vim-backbone
 	url = git@github.com:mklabs/vim-backbone.git
-[submodule "bundle/vim-symfony"]
-	path = bundle/vim-symfony
-	url = git@github.com:docteurklein/vim-symfony.git
 [submodule "bundle/vim-twig"]
 	path = bundle/vim-twig
 	url = git@github.com:beyondwords/vim-twig.git
@@ -100,9 +94,6 @@
 [submodule "bundle/vim-cucumber-align-pipes"]
 	path = bundle/vim-cucumber-align-pipes
 	url = git@github.com:quentindecock/vim-cucumber-align-pipes.git
-[submodule "bundle/supertab"]
-	path = bundle/supertab
-	url = git@github.com:ervandew/supertab.git
 [submodule "bundle/jellybeans.vim"]
 	path = bundle/jellybeans.vim
 	url = git@github.com:nanotech/jellybeans.vim.git
@@ -115,3 +106,15 @@
 [submodule "bundle/vim-rails"]
 	path = bundle/vim-rails
 	url = git://github.com/tpope/vim-rails.git
+[submodule "bundle/neocomplcache"]
+	path = bundle/neocomplcache
+	url = git@github.com:Shougo/neocomplcache.git
+[submodule "bundle/CamelCaseMotion"]
+	path = bundle/CamelCaseMotion
+	url = git@github.com:bkad/CamelCaseMotion.git
+[submodule "bundle/neosnippet"]
+	path = bundle/neosnippet
+	url = git@github.com:Shougo/neosnippet.git
+[submodule "bundle/snipmate-snippets"]
+	path = bundle/snipmate-snippets
+	url = git@github.com:honza/snipmate-snippets.git
