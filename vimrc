@@ -20,7 +20,7 @@ set wildmenu
 set wildmode=list:longest
 set nobackup
 set noswapfile
-set clipboard=unnamed  " enables clipboard sharing
+set clipboard=unnamedplus  " enables clipboard sharing
 " disabling neosnippet preview
 set completeopt-=preview
 
