@@ -6,7 +6,6 @@
 ""   Janus  <github.com/carlhuda/janus>
 ""
 
-
 call pathogen#infect()
 call pathogen#helptags()
 
@@ -20,7 +19,7 @@ set wildmenu
 set wildmode=list:longest
 set nobackup
 set noswapfile
-set clipboard=unnamedplus  " enables clipboard sharing
+set clipboard=unnamed  " enables clipboard sharing
 " disabling neosnippet preview
 set completeopt-=preview
 
@@ -90,6 +89,7 @@ autocmd FileType phtml,html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+
 let mapleader=","
 
 imap <leader>e <C-y>,
@@ -109,7 +109,7 @@ sunmap b
 sunmap e
 
 " SuperTab like snippets behavior.
-imap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
+imap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 smap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 
 map <leader>t :CtrlP<cr>
