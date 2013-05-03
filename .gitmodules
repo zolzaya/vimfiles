@@ -61,9 +61,6 @@
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = git@github.com:majutsushi/tagbar.git
-[submodule "bundle/vim-powerline"]
-	path = bundle/vim-powerline
-	url = git@github.com:Lokaltog/vim-powerline.git
 [submodule "bundle/sessionman.vim"]
 	path = bundle/sessionman.vim
 	url = git@github.com:vim-scripts/sessionman.vim.git
