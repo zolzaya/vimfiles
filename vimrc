@@ -11,7 +11,8 @@ call pathogen#helptags()
 
 filetype plugin indent on
 
-set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim/
+let g:Powerline_symbols = 'fancy'
 set nocompatible
 set t_Co=256
 set encoding=utf-8
@@ -29,7 +30,7 @@ runtime macros/matchit.vim  " enables % to cycle through `if/else/endif`
 
 syntax enable
 colorscheme jellybeans
-set guifont=Ubuntu\ Mono:h14
+set guifont=Ubuntu\ Mono\ for\ Powerline:h14
 
 set linespace=5  " set linespace
 set antialias
@@ -77,7 +78,6 @@ map Q gq
 :nnoremap <CR> :nohlsearch<cr>
 
 let g:neocomplcache_enable_at_startup = 1
-let g:Powerline_symbols = 'fancy'
 
 " Use smartcase.
 let g:neocomplcache_enable_smart_case = 1
