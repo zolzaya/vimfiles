@@ -15,7 +15,7 @@ runtime! syntax/css/css3-layout.vim
 runtime! syntax/css/css3-linebox.vim
 runtime! syntax/css/css3-lists.vim
 runtime! syntax/css/css3-marquee.vim
-" runtime! syntax/css/css3-mediaqueries.vim
+runtime! syntax/css/css3-mediaqueries.vim
 runtime! syntax/css/css3-multicol.vim
 runtime! syntax/css/css3-preslev.vim
 runtime! syntax/css/css3-regions.vim
