@@ -14,6 +14,7 @@ filetype plugin indent on
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim/
 let g:Powerline_symbols = 'fancy'
 set nocompatible
+set t_Co=256
 set encoding=utf-8
 
 " Disabling bell sound
@@ -30,7 +31,7 @@ set nowb
 " Mouse usage
 set mouse=a
 
-set clipboard=unnamed  " enables clipboard sharing
+set clipboard=unnamedplus  " enables clipboard sharing
 " disabling neosnippet preview
 set completeopt-=preview
 " max 15 tabs
