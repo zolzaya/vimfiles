@@ -49,9 +49,6 @@
 [submodule "bundle/handlebars"]
 	path = bundle/handlebars
 	url = git://github.com/nono/vim-handlebars.git
-[submodule "bundle/vim-backbone"]
-	path = bundle/vim-backbone
-	url = git@github.com:mklabs/vim-backbone.git
 [submodule "bundle/vim-twig"]
 	path = bundle/vim-twig
 	url = git@github.com:beyondwords/vim-twig.git
