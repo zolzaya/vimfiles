@@ -134,7 +134,6 @@ nmap <leader>p pV`]=
 nmap <leader>P PV`]=
 nnoremap <F3> :NumbersToggle<CR>
 nmap <F4> :NERDTreeToggle<cr>
-nmap <F5> :TagbarToggle<CR>
 nnoremap <F6> :GundoToggle<CR>
 let g:gundo_right = 1
 let g:gundo_preview_bottom = 1
