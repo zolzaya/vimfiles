@@ -109,7 +109,7 @@ nnoremap <silent> Q ZZ
 " clear the search buffer when hitting return
 :nnoremap <CR> :nohlsearch<cr>
 
-let g:neocomplcache_enable_at_startup = 1
+let g:neocomplcache_enable_at_startup = 0
 " Use smartcase.
 let g:neocomplcache_enable_smart_case = 1
 " Use camel case completion.
