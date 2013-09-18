@@ -42,7 +42,7 @@
 	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
 [submodule "bundle/zencoding-vim"]
 	path = bundle/zencoding-vim
-	url = https://github.com/mattn/zencoding-vim.git
+	url = https://github.com/mattn/emmet-vim.git
 [submodule "bundle/jade"]
 	path = bundle/jade
 	url = https://github.com/digitaltoad/vim-jade.git
