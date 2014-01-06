@@ -47,8 +47,10 @@ endif
 runtime macros/matchit.vim  " enables % to cycle through `if/else/endif`
 
 syntax enable
-colorscheme jellybeans " jellybeans
 set guifont=Ubuntu\ Mono\ for\ Powerline:h14
+" seoul256.vim
+colo seoul256
+set background=dark
 
 set linespace=5  " set linespace
 set antialias
