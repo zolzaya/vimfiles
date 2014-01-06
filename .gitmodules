@@ -1,9 +1,6 @@
 [submodule "bundle/fugitive"]
 	path = bundle/fugitive
 	url = https://github.com/tpope/vim-fugitive
-[submodule "bundle/haml"]
-	path = bundle/haml
-	url = https://github.com/chriseppstein/vim-haml
 [submodule "bundle/javascript"]
 	path = bundle/javascript
 	url = https://github.com/pangloss/vim-javascript
@@ -52,15 +49,9 @@
 [submodule "bundle/vim-twig"]
 	path = bundle/vim-twig
 	url = git@github.com:beyondwords/vim-twig.git
-[submodule "bundle/PIV"]
-	path = bundle/PIV
-	url = git@github.com:spf13/PIV.git
 [submodule "bundle/numbers.vim"]
 	path = bundle/numbers.vim
 	url = git@github.com:myusuf3/numbers.vim.git
-[submodule "bundle/vim-less"]
-	path = bundle/vim-less
-	url = git@github.com:groenewege/vim-less.git
 [submodule "bundle/vim-jst"]
 	path = bundle/vim-jst
 	url = git@github.com:briancollins/vim-jst.git
