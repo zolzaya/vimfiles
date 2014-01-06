@@ -135,7 +135,6 @@ imap <C-j> <C-x><C-o>
 " paste lines from unnamed register and fix indentation
 nmap <leader>p pV`]=
 nmap <leader>P PV`]=
-nnoremap <F3> :NumbersToggle<CR>
 nmap <F4> :NERDTreeToggle<cr>
 nnoremap <F6> :GundoToggle<CR>
 let g:gundo_right = 1
