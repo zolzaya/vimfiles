@@ -49,6 +49,7 @@ runtime macros/matchit.vim  " enables % to cycle through `if/else/endif`
 syntax enable
 set guifont=Ubuntu\ Mono\ for\ Powerline:h14
 " seoul256.vim
+let g:seoul256_background = 230
 colo seoul256
 set background=dark
 
