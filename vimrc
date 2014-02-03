@@ -255,14 +255,6 @@ nnoremap <leader>w8 :setlocal tabstop=8<CR>:setlocal shiftwidth=8<CR>
 " Disable WAI-ARIA attribute support:
 " let g:html5_aria_attributes_complete = 0
 
-" Don't prompt on Vim close if we want to save the session.
-let g:session_autosave=0
-" Don't auto-load saved sessions on Vim start.
-let g:session_autoload=0
-" Re-map for easy session saving/restore.
-noremap <leader>ss :SaveSession user<CR>
-noremap <leader>sr :OpenSession user<CR>
-
 let g:syntastic_check_on_open=1
 let g:syntastic_enable_signs=1
 " only active windows has cursor line highlight
